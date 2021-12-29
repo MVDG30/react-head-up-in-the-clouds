@@ -1,0 +1,60 @@
+.App {
+  margin: 30px 300px;
+  color: rgb(57, 62, 70);
+}
+
+.container {
+  margin-top: 30px;
+  max-width: 600px;
+  background: #ffe8d6;
+  border-radius: 15px;
+}
+
+.cardBody {
+  padding: 16px;
+}
+
+.row {
+  display: flex;
+}
+#input-city {
+  border: none;
+  border-radius: 20px;
+  padding: 6px;
+  font-size: 15px;
+}
+
+.current-position,
+.search-button {
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  margin: 0 10px;
+  color: white;
+  font-size: 15px;
+  background: #ff971d;
+}
+.currentTemperature {
+  font-size: 64px;
+}
+
+.units {
+  position: relative;
+  top: -60px;
+  right: -60px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding-inline-start: 16px;
+}
+li {
+  list-style: none;
+}
+
+.col {
+  padding: 0px;
+}
