@@ -1,6 +1,6 @@
 .App {
-  margin: 30px 300px;
   color: rgb(57, 62, 70);
+  margin: 0 auto;
 }
 
 .container {
@@ -24,7 +24,6 @@
   font-size: 15px;
 }
 
-.current-position,
 .search-button {
   border: none;
   border-radius: 20px;
@@ -40,8 +39,8 @@
 
 .units {
   position: relative;
-  top: -60px;
-  right: -60px;
+  top: -75px;
+  right: -90px;
 }
 
 a {
@@ -58,8 +57,7 @@ li {
 .col-sm-2 {
   text-align: center;
   padding: 10px 10px;
-  margin: 0 20px 20px;
+  margin: 0 5px 5px;
   position: relative;
-  width: 100%;
   min-height: 1px;
 }
