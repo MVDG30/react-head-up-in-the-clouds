@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Forecast from "./Forecast";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather() {
   let [message, setMessage] = useState(false);
@@ -8,12 +9,13 @@ export default function Weather() {
 
   function displayWeather(response) {
     let icon = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
-
     setMessage(
       <ul className="weatherList">
         <h2>{city}</h2>
 
-        <h5>Today 12:23pm</h5>
+        <h5>
+          <FormattedDate response={response} />
+        </h5>
 
         <div className="row">
           <div className="col-4">
@@ -36,10 +38,8 @@ export default function Weather() {
             </span>
 
             <ul className="weather-description">
-              <li>
-                <strong>
-                  {Math.round(response.data.weather[0].description)}
-                </strong>
+              <li className="text-capitalize">
+                {response.data.weather[0].description}
               </li>
               <li>
                 <strong>{Math.round(response.data.main.humidity)}</strong>%
@@ -60,7 +60,7 @@ export default function Weather() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    let apiKey = `c3704d557b195c9549dbf7f2691c5783`;
+    const apiKey = `c3704d557b195c9549dbf7f2691c5783`;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayWeather);
   }
